@@ -46,6 +46,7 @@ class QuizUI:
             q_text = self.quiz.next_question()
             self.canvas.itemconfig(self.question_text, text=q_text, fill="#333")
         else:
+            self.score_label.config(text=f"Final Score: {self.quiz.score}")
             self.canvas.itemconfig(self.question_text, text=f"Quiz is End!\nYour Score is {self.quiz.score}", fill="#333")
             self.true_button.config(state="disabled")
             self.false_button.config(state="disabled")
